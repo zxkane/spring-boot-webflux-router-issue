@@ -13,7 +13,8 @@ import org.springframework.test.web.reactive.server.WebTestClient;
  * Created by kane on 2017/8/1.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
+        properties = {"spring.main.webApplicationType=reactive"})
 @ActiveProfiles("integTest")
 public class NoteHandlerTest {
 
