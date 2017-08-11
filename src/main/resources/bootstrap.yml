@@ -19,7 +19,8 @@ hystrix:
             timeoutInMilliseconds: 10000
 logging:
   file: agent.log
-
+  level:
+    org.springframework.web.reactive: TRACE
 ---
 spring:
   profiles: development

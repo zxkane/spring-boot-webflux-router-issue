@@ -1,6 +1,7 @@
 package com.github.zxkane;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,6 +14,8 @@ import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRep
 public class AgentApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AgentApplication.class, args);
+		SpringApplication application = new SpringApplication(AgentApplication.class);
+		application.setWebApplicationType(WebApplicationType.REACTIVE);
+		application.run(args);
 	}
 }
